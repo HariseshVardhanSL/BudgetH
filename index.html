@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetH</title>
+    <link rel="icon" href="../TODO-HVM/h symol.jpg"/>
+    <link rel="stylesheet" href="./b.css"/>
+    <style>
+        .v1{
+            position: absolute;
+            right: 2%;
+            color:black;
+            background-color: rgb(237, 110, 110);
+            padding: 2px 2px;
+            border-radius: 20px;
+        }
+        .tb{
+            font-family: "Kanit", serif;
+            font-weight: 900;
+            font-style:normal;
+            font-size: xx-large;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .delete-btn {
+            cursor: pointer;
+            margin-left: 0px; /* Space between the amount and the delete button */
+            color: red;
+        }
+        #balance2{
+            display: inline-block;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <video autoplay muted loop class="video">
+            <source src="./.mp4" type="video/webm"/>
+        </video>
+        <div class="title">
+            <video autoplay muted loop class="video">
+                <source src="./.mp4" type="video/webm"/>
+            </video>
+            <center class="cen1">
+                <h1 class="tb">BUDGET</h1><span><img class="img1" src="../TODO-HVM/h symol.jpg"/></span>
+            </center>
+        </div>
+        <div id="top">
+            <div id="one">
+                <center>
+                    <h4 id="text">Amt in acc/Balance:</h4> <p id="balance">0</p>
+                </center>
+            </div>
+            <div id="one11">
+                    <input type="datetime-local" id="dt"/>
+            </div>
+        </div>
+        <div class="main">
+            <!-- <center> -->
+                <!-- <div id="box1">
+                    <div id="four">
+                        <center>
+                            <h4 id="text3">Savings:</h4> <p id="sav">0</p>
+                        </center>
+                    </div>
+                </div> -->
+                <div id="nxt">
+                    <div id="three">
+                        <center>
+                            <h4 id="text2">Credited: </h4>  <p id="balance2">0</p>
+                        </center>
+                    </div>
+                    <div id="two">
+                        <center>
+                            <h4 id="text1">Debited: </h4>  <p id="balance1">0</p>
+                        </center>
+                    </div>
+                </div>
+            <!-- </center> -->
+             <div id="exp">
+                <h5 id="exp1">Do you want to reset to zero?</h5>
+                <button id="exp2" onclick="res1()">credited amt</button>
+                <button id="exp2" onclick="res()">debited amt </button>
+                
+             </div>
+            <div id="b1">
+                <p id="t0">Enter your <br>Balance</p>
+                <input type="number" id="inpsal" placeholder="Amount"/>
+                <button id="but0" onclick="one()">Update</button>
+            </div>
+            <div id="box0">
+                <p id="t">Enter your <br> Spending limit</p>
+                <input type="number" id="inpbud" placeholder="spending limit"/>
+                <button id="but1" onclick="sl()">Update</button>
+            </div>
+            <!-- <div id="b2">
+                <p id="ts">Savings</p>
+                <input type="number" id="inpsav" placeholder="Savings"/>
+                <button id="buts" onclick="onesav()">Update</button>
+            </div> -->
+            <div id="box2">
+                <p id="t1">Debit</p>
+                <input type="text" id="inprea" placeholder="Reason"/>
+                <input type="number" id="inpspe" placeholder="Amt spent"/>
+                <button id="but2" onclick="debi()">-Debit</button>
+            </div>
+            <div id="box3">
+                <p id="t2">Credit</p>
+                <input type="text" id="inpreac" placeholder="Reason"/>
+                <input type="number" id="inpspec" placeholder="Amt received"/>
+                <button id="but3" onclick="cred()">+Credit</button>
+            </div>
+            <!-- <div id="box4"> -->
+                <ul id="listcontainer">
+
+                </ul>
+            <!-- </div> -->
+        </div> 
+
+    </div>
+    <script src="./b1.js"></script>
+    
+</body>
+</html>
